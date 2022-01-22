@@ -1,0 +1,434 @@
+@import "../fonts/stylesheet.scss";
+@import "variable.scss";
+@import "gsp_css_based_grids.scss";
+@import "global.scss";
+
+html {-webkit-tap-highlight-color: transparent;  -webkit-tap-highlight-color: transparent;}
+body {font-family: 'heeboregular', Arial, sans-serif;}
+
+.redBtn {background:$red; padding:19px 22px 17px 22px; font-size: 14px; line-height: 1;font-family: 'heebomedium';letter-spacing: 0.5px; color: #ffffff; text-decoration:none; display:inline-block; border-radius:3px; transition:all 0.3s linear; cursor: pointer; border: none; text-transform: uppercase;}
+.redBtn .icon {background: transparent url(../images/sprite.svg) no-repeat -46px -165px; display: inline-block; width: 16px; height: 10px;}
+.redBorder {background:#fff; padding:17px 22px; font-size: 14px; line-height: 1;font-family: 'heebomedium';letter-spacing: 0.5px; color: $red; text-decoration:none; display:inline-block; border-radius:3px; transition:all 0.3s linear; cursor: pointer; border: solid 1px $red; text-transform: uppercase;}
+.middle {position: relative;}
+.mainWrapper {position: relative;background: #fff;}
+
+.sprite {background: transparent url(../images/sprite.svg) no-repeat 0px 0px; display: inline-block;}
+
+/*Header Footer css*/
+@import "header-footer.scss";
+
+.homeBanner {margin: 0px auto; max-width: 1920px; position: relative; background: #000;
+	.item {position:relative;
+		&:before {background:linear-gradient(31.72deg, #37208F 1.49%, #2228B3 65.98%, #2E5FEA 87.62%); position:absolute;
+			left:0px; top:0px; width:100%; height:100%; content:""; opacity: 0.87;}
+	}
+	img {width: 100%; min-height: 300px; object-fit: cover;/*mix-blend-mode: darken;*/}
+}
+.homeBannerText {max-width: 1000px; left:30px; right:30px; position:absolute; top:53%; transform: translateY(-50%);
+	margin:0px auto; color:$white; text-align:center;
+	.textA {font-size: 26px;font-family: 'heebobold'; font-weight:normal; color:rgba(255, 255, 255, 0.8); line-height: 1.1;
+		span {color: $red;}
+	}
+	.textB {letter-spacing: 0.36px;color: #cccccc; font-size: 16px; max-width:600px; margin:10px auto 30px auto;}
+}
+#homeBanner {
+	.owl-dots {display:none; }
+	.owl-nav {display:none;}
+	.owl-nav .owl-prev, .owl-nav .owl-next {position: absolute; top: 40%; left: 20px;/*transform: translate(0, -50%);*/ opacity: 0.5; transition:all 0.2s linear;
+		.sprite {background-position:-222px -100px; width: 60px; height: 30px;}
+	}
+	.owl-nav .owl-next {left: inherit; right: 20px;
+		.sprite {background-position:-150px -100px;}
+	}
+}
+.brandVichleRow {position: relative; margin: -50px 0px 30px 0px;  z-index: 1;}
+.brandBlockCol {float: left; width: 100%; margin-bottom: 20px; background: #FFFFFF; box-shadow: 0px 10px 40px rgba(78, 82, 99, 0.2); border-radius: 4px; padding: 15px;
+	.heading {font-size: 20px; color: #2C425D; position: relative; padding:12px 0px 10px 60px; margin-bottom: 12px;
+		&:before {content:"";position: absolute;left: 0px;top:0px; width: 50px; height: 50px; display: inline-block; background: transparent url(../images/sprite.svg) no-repeat -324px -19px; 
+		}
+	}
+	&:nth-child(2) {
+		.heading:before {background-position:-20px -98px;}
+	}
+	&:nth-child(3) {
+		.heading:before {background-position:-87px -98px;}
+	}
+
+}
+.vichleBrandRow { display: inline-block; width: 100%;
+	a {display: inline-block; text-align: center; width: 90px; height: 90px; border-radius: 4px; background:#fff; line-height: 90px; vertical-align: top;
+		img {vertical-align: middle;}
+	}
+}
+
+.middleBg {background:#F0F7FF; margin-bottom: 30px;}
+.tabSection {position: relative; margin-bottom: 30px;
+	.tabNavScroll {overflow-x: auto;box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.06);}
+	.tabNav {display: inline-block; min-width: 515px;
+			li {float: left; border-top: 1px solid #D5E2F1;border-right: 1px solid #D5E2F1;
+			span {padding: 18px 17px; color: #2C425D;opacity: 0.7;text-transform: uppercase; font-size: 16px;font-family: 'heebobold'; display: block; cursor: pointer;}
+			&:first-child {border-top-left-radius: 4px;
+				&.active:before {border-top-left-radius: 4px;}
+			}
+			&:last-child {border-top-right-radius: 4px;
+				&.active:before {border-top-right-radius: 4px;}
+			}
+			&.active {background:#fff;position: relative;
+				span {opacity: 1;}
+				&:before {content:"";position: absolute; left: 0px; top:-1px; height: 4px; width: 100%; background:$red;}
+			}
+		}
+	}
+	.tabContainer {background: #FFFFFF; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); border-radius:0px 4px 4px 4px; position: relative; top: -10px; padding: 15px;
+	}
+}
+
+.searchVichleRow {display: inline-block; width: 100%; padding:0px;}
+.searchVichelBlock {display: inline-block; vertical-align: top; width: 100%; margin-bottom: 20px;
+	.title {color: #999999;font-size: 14px; margin: 0px 0px 5px 0px;}
+	.radioInputs {color: #2C425D; font-size: 16px;
+		.gs_control .indicator {top: 1px;}
+	}
+	.dropDown {color: #2C425D; font-size: 18px;
+		.sortList {font-size: 16px;}
+	}
+	&:last-child {margin-bottom: 0px;
+		.redBtn {width: 100%;}
+	}
+}
+
+.radioInputs {
+	.gs_control {display: inline-block;  position: relative;  cursor: pointer;vertical-align: middle; margin-right: 30px; -webkit-tap-highlight-color: transparent;
+		label {cursor: pointer; margin: 2px 0px;padding-left: 35px;}
+		input { position: absolute; z-index: 0; visibility: hidden;}
+		.indicator { position: absolute; top: 0px; left: 0; height: 20px; width: 20px;
+    		background: #fff; border: 1px solid rgba(36,39,44,.5);transition: all 0.3s linear; border-radius: 50%; padding-left: 7px;}
+	}
+	.gs_radio {
+		input~.indicator~i {font-style: normal;}
+		input:checked~.indicator {background: #fff; border-color: $red;}
+		.indicator:after {left: 3px;top: 3px;height: 12px;width: 12px;border-radius: 50%; background: $red; content: ""; position: absolute; display: none;transition: all 0.3s linear;}
+		input:checked~.indicator:after {display: block;}
+	}
+}
+
+.dropDown { border: solid 1px #ccc; padding: 5px 10px 6px 10px; border-radius: 3px; position: relative;
+	label {position: relative; cursor: pointer; padding-right: 20px; display: block;
+		&:before { content: ""; position: absolute; right: 0px; top: 9px; width: 15px; height: 10px; background: transparent url(../images/sprite.svg) no-repeat -18px -164px; }
+	}
+	.sortList {position: absolute; left: -1px; top: 96%; right: -1px; padding: 8px 0; border: solid 1px #cccccc; border-top: none; z-index: 1; background: #fff; display: none; box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.08);
+		li span {display: block; color: #333333; cursor: pointer; padding: 5px 12px;
+			&:hover {background-color: #f4f4f5;}
+		}
+	}
+	&:hover {box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.08);border-color: #ccc;
+		/*.sortList { display: block; }*/
+	}
+}
+
+.homeHeading {margin-bottom: 15px;
+	h2 {font-size: 24px; line-height: normal;color: #2C425D;text-transform: uppercase; margin: 0px;font-weight: normal;
+		span {color: #25a1db;}
+	}
+	.desc {color: #666666;font-size: 16px; line-height: 23px;opacity: 0.66;
+		p {margin-bottom: 15px;
+			&:last-child {margin-bottom:0px;}
+		}
+	}
+}
+
+.homeLocationSection {background: transparent url(../images/map.png) no-repeat top 10px center;
+	.homeHeading {text-align: center;}
+}
+.locationBlock {background: #FFFFFF;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);border-radius: 4px; margin-bottom: 30px;
+	.heading { position: relative; padding:18px 70px 13px 20px; border-bottom: solid 1px #E6ECF7;
+		h3 {font-size: 20px; color: #2C425D; font-weight: normal;}
+		img {position: absolute;right: 12px;top:0px; max-height: 60px;}
+	}
+	.locationLink {padding: 18px 8px 8px 16px; 
+		li {display: inline-block; width: 49.3%; vertical-align: top; margin-bottom: 7px;
+			a {color: #999999;font-size: 16px; position: relative; padding-left: 18px; display: block; padding-right: 4px;
+				&:before {content:"";position: absolute;left: 3px;top:3px; width: 10px; height: 15px; display: inline-block; background: transparent url(../images/sprite.svg) no-repeat -318px -97px;}
+			}
+		}
+	}
+}
+
+.homeBuyingVehicleSection {margin-bottom: 10px;
+	.homeHeading {text-align: center;}
+}
+.vichleBlock { box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); margin-bottom:30px;  border-radius: 5px; display: block;
+	.img {margin: 0px; overflow: hidden;background: #000; border-radius: 5px 5px 0px 0px;
+		img {transition: transform 0.3s linear; display: block; margin: 0px auto;}
+	}
+	.vichleTextInfo {padding: 20px;
+		h3 {font-size: 20px; color: #2C425D; margin-bottom: 4px;font-family: 'heebomedium';
+			font-weight: normal;}
+		p {font-size: 16px; color: #999999; }
+	}
+	.viewNow {color: $red; text-transform: uppercase; margin-top: 10px;letter-spacing: 0.05em; font-size: 14px;font-family: 'heebomedium';display: inline-block;
+		.icon {background: transparent url(../images/sprite.svg) no-repeat -340px -99px; display: inline-block; width: 18px; height: 10px;}
+	}
+}
+
+.homeAboutSection { margin-bottom: 20px;}
+.aboutUsImg {margin: 0px 0px 15px 0px; display: none;
+	img {border-radius: 4px;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);}
+}
+.aboutUsText {color: #999999;font-size: 16px; line-height: 28px;}
+.aboutBlockRow {margin-top: 20px;
+	.aboutBlock {text-align: center; border-radius: 4px;border: 1px solid #D5E2F1; padding: 20px; margin-bottom: 20px; display: block;
+		.sprite {width: 65px; height: 65px; background-position:-18px -18px;}
+		.text {display: block;color: #2C425D;font-size: 18px; margin-top: 6px;}
+
+		&:nth-child(2) .sprite {background-position:-94px -18px;}
+		&:nth-child(3) .sprite {background-position:-168px -18px;}
+		&:nth-child(4) .sprite {background-position:-244px -14px;}
+	}
+}
+
+.homeEnquirySection {padding: 30px 0px;
+	background:#ffffff url(../images/footer-map.jpg) no-repeat top right;
+}
+.enqueryTabSection {
+	.enqueryTabNav {overflow-x: auto; 
+		margin: -10px -15px 0px -15px; padding:10px 15px 10px 15px;
+		&::-webkit-scrollbar {display: none;}
+		ul {min-width: 750px; }
+		li {display: inline-block; background: #FFFFFF; border: 1px solid #D5E2F1; border-radius: 4px; text-align: center;height: 100px; width: 100px; line-height: 100px; cursor: pointer; margin-right: 0.5%; position: relative;transition: all 0.2s linear;
+			img { vertical-align: middle; max-width: 70px;}
+			&:hover {box-shadow: 0px 0px 15px rgba(44, 66, 93, 0.2);}
+			&.active {box-shadow: 0px 0px 15px rgba(44, 66, 93, 0.2);
+				&:before {content:""; bottom: -12px; left: -1px; right:-1px; background: #fff; height: 14px; position: absolute;border-left: 1px solid #D5E2F1; border-right: 1px solid #D5E2F1;z-index: 1;  }
+			}
+		}
+	}
+	.enqueryTabBlock {padding:15px; background: #FFFFFF; border: 1px solid #D5E2F1; box-shadow: 0px 10px 20px rgba(44, 66, 93, 0.2); border-radius:0px 0px 4px 4px;
+		position: relative; top: -1px;}
+	.borderRight {border-bottom: 1px solid #D5E2F1; margin-bottom: 20px; border-right: none; padding-bottom: 20px;
+		&:last-child {border-right:none; border-bottom: none; padding-bottom: 0px;}
+	}
+	&:nth-child(3) {display: none;}
+}
+
+.enqueryProduct {
+	h3 {font-size: 20px;line-height: 29px;color: #2C425D; margin-bottom: 17px;}
+	.infoRow {display: inline-block; width: 100%;
+		.left {float: left; width: 54%; font-size: 16px; line-height: 23px;color: #666666;}
+		.right {float: right; width: 40%;}
+	}
+	.call {color: #2C425D; font-size: 16px; position: relative; padding-left: 24px; margin-bottom: 10px; 
+		&:before {content:"";position: absolute;left: 0px;top:4px; width: 20px; height: 20px; display: inline-block; background: transparent url(../images/sprite.svg) no-repeat -74px -164px;}
+	}
+	.buttonsRow button {margin: 5px 5px 0px 0px;}
+}
+
+.footer {background: #F0F7FF; border: 1px solid #D5E2F1;}
+.copyRightText {color: #2C425D;margin: 18px 0px 10px 0px; font-size: 14px; text-align: center;}
+.footerSocial .socialIcons {text-align: center;}
+
+
+
+
+
+@media (min-width: 768px) {
+	.homeBannerText {left:30px; right:30px; top: 47%;
+		.textA {font-size: 36px;}
+		.textB {font-size: 16px; margin:0px auto 30px auto;}
+	}
+	.homeBanner img {min-height: 400px;}
+	.owl-item {
+		.textA, .textB {opacity: 0; position: relative; bottom: -60px; transition: all 1s linear;}
+		.textB {transition: all 1s linear 0.3s;}
+		&.active {
+			.textA, .textB {opacity: 1; bottom: 0px;}
+		}
+	}
+
+	.redBtn { position: relative; overflow:hidden;
+		/*&:before {content: '';  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; transition: all 0.5s; opacity: 1; transform: translate(-23%, -200%) rotate(-30deg); border-bottom: solid 1px #ffffffad; background: #ffffff17;}*/
+		&:hover {background: #da7e19;
+			.icon {animation: arrowMove 0.4s; position: relative;}
+			&:before { transform: translate(0,0); opacity: 0;}
+		}
+	}
+	.redBorder:hover {background:#da7e19;color: #fff; border-color: #da7e19; }
+	@keyframes arrowMove {
+	    0% {right: 0px;}
+	    50% {right: -5px;}
+	    100% {right: 0px;} 
+	}
+	.brandBlockCol {width: 100%; margin-bottom: 20px;
+		&:nth-child(2) { width: 49%; margin-right: 1%;}
+		&:nth-child(3) { width: 49%; margin-left: 1%;}
+	}
+	.vichleBrandRow {
+		a {width: 100px; height: 100px; line-height: 100px;
+			&:hover {box-shadow: 0px 10px 40px rgba(44, 66, 93, 0.2); position: relative;}
+		}
+	}
+
+	.tabSection .tabNav li {
+		span { padding: 18px 30px;}
+		&:hover span {opacity: 1;}
+	}
+
+	.searchVichleRow {padding: 16px 0px 8px 0px;}
+	.searchVichelBlock { width: 24.5%; margin-bottom: 0px;
+		.radioInputs {margin-left: 0px; font-size: 16px;
+			.gs_control .indicator {top: 2px;}
+		}
+		.dropDown {font-size: 16px;width: 95%;
+			.sortList {font-size: 14px;}
+		}
+		&:nth-child(2) .title, &:nth-child(3) .title {margin-left: 10px; margin-bottom: 0px;}
+		.dropDown {border-color: transparent;
+			.sortList {border: none;}
+		}
+		&:nth-child(4) {margin-top: 4px;}
+		&:last-child .redBtn {width: auto;}
+	}
+
+	.middleBg { margin-bottom: 73px;}
+	.homeHeading {margin-bottom: 35px;
+		h2 {font-size: 36px; line-height: 53px;}
+	}
+	.homeLocationSection {padding: 30px 0px 48px 0px; background-position: top 100px center;}
+	
+	.locationBlock .locationLink { min-height: 142px;
+		li a:hover {color: $red;
+			&:before {background-position: -296px -97px;
+				animation: arrowMoveB 0.4s;
+			}
+		}
+	}
+	.homeBuyingVehicleSection {margin-bottom: 93px;}
+	.vichleBlock { transition: all 0.3s linear;
+		&:hover {box-shadow: 0px 10px 30px rgba(78, 82, 99, 0.2);
+			.img img {transform: scale(1.05);  opacity: 0.9;}
+			.viewNow .icon {animation: arrowMove 0.4s; position: relative;}
+			.vichleTextInfo h3 {color: $red; transition: all 0.3s linear;}
+		}
+	}
+	@keyframes arrowMoveB {
+	    0% {left: 3px;}
+	    50% {left: -2px;}
+	    100% {left: 3px;} 
+	}
+	.homeAboutSection { margin-bottom: 40px;
+		.homeHeading {margin-top: -10px; margin-bottom: 23px;}
+	}
+	.aboutBlockRow {display: inline-block; width: 100%; margin-top: 41px;
+		.aboutBlock { display: inline-block; width: 47%; vertical-align: top; margin: 0px 0px 30px 0px; transition: all 0.3s linear;
+			.text {font-size: 20px;}
+			&:nth-child(even) {margin-left: 4%;}
+			&:hover {box-shadow: 0px 10px 40px rgba(44, 66, 93, 0.2); border-color: transparent;}
+		}
+	}
+	.homeEnquirySection {padding: 70px 0px 30px 0px;}
+	.enqueryTabSection .borderRight {border-right: 1px solid #D5E2F1; border-bottom: none; margin-bottom:0px; padding-bottom: 0px;
+		&:last-child {border-right:none;}
+	}
+
+	.copyRightText { text-align: left;}
+	.footerSocial .socialIcons {text-align: right;}
+
+	.aboutUsImg {display:block;}
+
+}
+@media (min-width: 1024px) {
+	.brandBlockCol {width: 46%; margin: 0px;
+		&:nth-child(2) { width: 30%; margin: 0px 1.5%;}
+		&:nth-child(3) { width: 20%;margin: 0px;}
+	}
+	.homeBanner img { min-height: 500px;}
+	.homeBannerText {left:30px; right:30px;
+		.textA {font-size: 80px;}
+		.textB {font-size: 24px; margin:0px auto 30px auto;}
+	}
+	#homeBanner {
+		.owl-nav .owl-prev, .owl-nav .owl-next {
+			transform: translate(0, -28%);
+			&:hover {
+				opacity:1;
+			}	    
+		}
+		.owl-nav {display:block;}
+	}
+	.brandVichleRow { margin: -105px 0px 82px 0px;}
+
+	.enqueryTabSection {
+		.enqueryTabNav { padding-bottom: 16px;
+			li {height: 185px; width: 185px; line-height: 185px; margin-right: 27px; 
+				img {max-width: 100px;}
+				&.active {
+					&:before {bottom: -18px; height: 30px;}
+				}
+			}
+		}
+		.enqueryTabBlock {padding:30px 15px;}
+	}
+	.enqueryProduct {padding: 0px 15px;
+		.call {margin-bottom: 4px;margin-top: 10px;}
+	}
+	.enqueryTabContainer {max-width: 830px; margin-bottom: 40px;}
+	.enqueryTabNav li:nth-child(4) ~ li {display: none;}
+	.enqueryTabSection:nth-child(3) {display: block;}
+}
+
+
+@media (min-width: 1200px) {
+	.vichleBlock { 
+		.vichleTextInfo {display: inline-block; width: 100%;padding: 30px 24px 23px 24px;
+			h3 {font-size: 24px;}
+		}
+		.left {float: left; width: 61%;}
+		.right {float: right; width: 37%; text-align: right;}
+		.viewNow {margin-top: 42px;}
+	}
+	.enqueryProduct {
+		.buttonsRow button {width: 160px; padding-left: 12px; padding-right: 12px;
+			&:last-child {/*margin-left:24px;*/ float:right;}
+		}
+	}
+}
+@media (min-width: 1290px) {
+	.brandBlockCol {width: 598px; 
+		&:nth-child(2) {width: 369px; margin: 0px 20px;}
+		&:nth-child(3) {width: 252px; }
+	}
+
+	.searchVichelBlock {
+		.radioInputs { font-size: 20px;
+			.gs_control .indicator {top: 5px;}
+		}
+		.dropDown {font-size: 20px; max-width: 230px;
+			.sortList {font-size: 18px;}
+		}
+		&:nth-child(1) {width: 330px;margin-left: 40px;}
+		&:nth-child(2) {width: 300px; }
+		&:nth-child(3) {width: 332px;}
+		&:nth-child(4) {width: auto;}
+	}
+}
+@media (max-width: 767px) {
+	.fullScroll {overflow-x: scroll; padding: 0px 20px; margin: 0px -15px;
+		.gsc_row {width: 1000px;}
+		&::-webkit-scrollbar {display: none;}
+		.gsc_row {margin-left: -7px; margin-right: -7px;}
+		.gsc_col-xs-4 {padding-left: 7px; padding-right: 7px;}
+	}
+	.vichleBrandRow { white-space: nowrap; overflow-y: auto;}
+	.vichleBrandRow a {border:solid 1px #E6ECF7; margin-right: 3px; width: 84px; height: 84px;line-height: 84px; overflow:hidden;}
+
+}
+@media (max-width: 400px) {
+	.enqueryProduct .buttonsRow button {padding-left: 12px; padding-right: 12px;}
+}
+
+
+/*Inner pages for common css*/
+@import "inner-pages.scss";
+
+/*Inner contact form pages for common css*/
+@import "contact-form.scss";
